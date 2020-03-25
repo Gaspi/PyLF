@@ -87,6 +87,12 @@ def mk_pies(params, codom):
         res = Pi(x,tx,res)
     return res
 
+def mk_lams(params, body):
+    res = body
+    for (x,tx) in params:
+        res = Lam(x,tx,res)
+    return res
+
 
 #myterm = Lam("u",Pi("z",Const("Nat"),Type()),App(Const("f"), [DB("x",2), Lam("z",None,DB("y",1))]))
 #print(myterm.__repr__())
