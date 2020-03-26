@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+"""
+@author: Gaspard FEREY
+"""
 
 class Term:
     def __str__(self):
@@ -92,6 +95,26 @@ def mk_lams(params, body):
     for (x,tx) in params:
         res = Lam(x,tx,res)
     return res
+
+
+class Pattern(Term):
+    def __init__(self):
+        pass
+
+class MVar(Pattern):
+    def __init__(self,name):
+        self.name=name
+    def __str__(self):
+        return("%s" % self.name)
+    def __wp_str__(self):
+        return(self.__str__())
+class Bracket(Pattern):
+    def __init__(self,expr):
+        self.expr=expr
+    def __str__(self):
+        return("\{%s\}" % self.expr)
+    def __wp_str__(self):
+        return(self.__str__())
 
 
 #myterm = Lam("u",Pi("z",Const("Nat"),Type()),App(Const("f"), [DB("x",2), Lam("z",None,DB("y",1))]))

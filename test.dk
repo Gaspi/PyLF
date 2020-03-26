@@ -1,0 +1,21 @@
+#NAME test .
+
+A : Type.
+
+private B : Type.
+
+def x : A -> B.
+
+private defac sz [ A ].
+
+def f : (x : A) -> A.
+
+[A,B] f A B --> A.
+{my_name} [B] f A B --> A.
+
+#EVAL a.
+#PRINT "test".
+
+def a (x:Type) : x := (y : A) => x.
+
+private append (u:Type) : (x : (t)) -> (x).
