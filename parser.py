@@ -348,7 +348,6 @@ def p_rpat_lam(p):
 ################### Patterns
 
 
-
 def p_bindannot(p):
     "bindannot : LEFTPAR IDENT COLON expr RIGHTPAR"
     # Create a new scope for local variables

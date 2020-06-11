@@ -3,6 +3,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# PLY generated
+parser.out
+parsetab.py
+
 #Emacs
 *~
 

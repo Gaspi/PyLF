@@ -73,7 +73,7 @@ class Signature:
             raise KeyError(f"Symbol already in signature: {ident}")
         else:
             self.sig[ident] = {
-                  'scope'     :  scope,
+                  'scope'     : scope,
                   'staticity' : staticity,
                   'type'      : idtype,
                   'rules'     : []
